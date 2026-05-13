@@ -5,7 +5,7 @@ import { AuthResponse, LoginDto, RegisterDto, PagedResult, Book, Author, Categor
 // Tüm API istekleri buradan geçer
 // baseURL → her istekte başa otomatik eklenir
 const api = axios.create({
-  baseURL: "http://localhost:5024/api",
+  baseURL: process.env.NEXT_PUBLIC_API_URL || "http://localhost:5024/api",
   headers: {
     "Content-Type": "application/json",
   },
